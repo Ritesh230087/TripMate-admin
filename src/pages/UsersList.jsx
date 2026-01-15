@@ -12,7 +12,7 @@ const UsersList = () => {
   const [showDeletePopup, setShowDeletePopup] = useState(false);
   const [userToDelete, setUserToDelete] = useState(null);
 
-  const BASE_URL = "http://192.168.1.66:5000/";
+  const BASE_URL = "http://192.168.1.87:5000/";
 
   useEffect(() => { fetchUsers(); }, []);
 

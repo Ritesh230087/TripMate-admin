@@ -53,7 +53,7 @@ const RideDetailModal = ({ ride: initialRide, onClose }) => {
   const [firstArrived, setFirstArrived] = useState(null); 
   const [paths, setPaths] = useState({ approach: [], walk: [], trip: [], goal: [], livePerspective: [] });
 
-  const BASE_URL = "http://192.168.1.66:5000";
+  const BASE_URL = "http://192.168.1.87:5000";
 
   const rStart = ride.fromLatLng || { lat: 0, lng: 0 };
   const pHome = ride.passengerActualPickup || rStart;
@@ -236,7 +236,7 @@ const RideDetailModal = ({ ride: initialRide, onClose }) => {
 const ParticipantCard = ({ user, role, sub, rating }) => (
   <div className="bg-white p-6 rounded-[40px] border border-gray-100 flex items-center justify-between shadow-sm">
     <div className="flex items-center gap-5">
-      <img src={user?.profilePic?.startsWith('http') ? user.profilePic : `http://192.168.1.66:5000/${user?.profilePic}`} className="w-14 h-14 rounded-[20px] object-cover ring-4 ring-[#F9F5E9]" alt="" onError={(e) => e.target.src="https://ui-avatars.com/api/?name=User"} />
+      <img src={user?.profilePic?.startsWith('http') ? user.profilePic : `http://192.168.1.87:5000/${user?.profilePic}`} className="w-14 h-14 rounded-[20px] object-cover ring-4 ring-[#F9F5E9]" alt="" onError={(e) => e.target.src="https://ui-avatars.com/api/?name=User"} />
       <div><p className="text-[8px] font-black text-[#8B4513] uppercase mb-1">{role}</p><p className="text-lg font-black text-[#2D1B08] leading-none mb-1 truncate max-w-[120px]">{user?.fullName || "Member"}</p><p className="text-[10px] font-bold text-gray-400 uppercase">{sub}</p></div>
     </div>
     <div className="bg-[#F9F5E9] px-3 py-2 rounded-xl text-[#8B4513] font-black text-xs flex items-center gap-1 shadow-inner"><Star size={12} fill="currentColor"/> {rating?.toFixed(1) || "5.0"}</div>

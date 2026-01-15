@@ -110,7 +110,7 @@ const Sidebar = () => {
       <div className="p-6 border-t border-gray-50 mt-auto">
         <div className="bg-[#F9F5E9]/50 rounded-3xl p-4 mb-4 flex items-center gap-3">
            <img 
-              src={admin?.profilePic?.startsWith('http') ? admin.profilePic : `http://192.168.1.66:5000/${admin?.profilePic}`} 
+              src={admin?.profilePic?.startsWith('http') ? admin.profilePic : `http://192.168.1.87:5000/${admin?.profilePic}`} 
               className="w-10 h-10 rounded-xl object-cover border-2 border-white shadow-sm"
               alt="Admin"
               onError={(e) => e.target.src = 'https://ui-avatars.com/api/?name=Admin&background=8B4513&color=fff'}

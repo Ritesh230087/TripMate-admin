@@ -9,7 +9,7 @@ import {
 
 const FullRideDetailModal = ({ ride, onClose }) => {
   const [kycTab, setKycTab] = useState('Identity');
-  const BASE_URL = "http://192.168.1.66:5000";
+  const BASE_URL = "http://192.168.1.87:5000";
   const isCancelled = ride.status === 'cancelled';
   const isPaid = ride.paymentStatus === 'paid';
 
@@ -249,7 +249,7 @@ const ScheduleItem = ({ icon, label, value, small }) => (
 const UserStrip = ({ user, role, rating }) => (
   <div className="bg-white p-4 rounded-2xl border border-gray-100 flex items-center justify-between">
     <div className="flex items-center gap-3 overflow-hidden">
-      <img src={user?.profilePic?.startsWith('http') ? user.profilePic : `http://192.168.1.66:5000/${user?.profilePic}`} className="w-10 h-10 rounded-xl object-cover border" alt="" onError={(e) => e.target.src="https://ui-avatars.com/api/?name=User&background=F9F5E9&color=8B4513"} />
+      <img src={user?.profilePic?.startsWith('http') ? user.profilePic : `http://192.168.1.87:5000/${user?.profilePic}`} className="w-10 h-10 rounded-xl object-cover border" alt="" onError={(e) => e.target.src="https://ui-avatars.com/api/?name=User&background=F9F5E9&color=8B4513"} />
       <div className="text-left"><p className="text-[11px] font-black text-[#2D1B08] truncate">{user?.fullName}</p><p className="text-[8px] font-bold text-gray-400 uppercase">{user?.phone || 'No phone'}</p></div>
     </div>
     <div className="flex items-center gap-1 text-[#8B4513] font-black text-[10px] bg-[#F9F5E9] px-2 py-1 rounded-lg"><Star size={10} fill="currentColor"/> {rating?.toFixed(1) || "5.0"}</div>

@@ -210,7 +210,7 @@ const Leaderboard = ({ title, items, label }) => (
         <div key={i} className="flex items-center justify-between p-4 bg-[#F9F5E9]/50 rounded-[30px] group hover:bg-[#8B4513]/10 transition-all">
           <div className="flex items-center gap-4">
             <img 
-              src={item.user.profilePic?.startsWith('http') ? item.user.profilePic : `http://192.168.1.66:5000/${item.user.profilePic}`} 
+              src={item.user.profilePic?.startsWith('http') ? item.user.profilePic : `http://192.168.1.87:5000/${item.user.profilePic}`} 
               className="w-12 h-12 rounded-2xl object-cover ring-2 ring-white shadow-md" 
               alt=""
               onError={(e) => e.target.src="https://ui-avatars.com/api/?name="+item.user.fullName}

@@ -5,7 +5,7 @@ import { X, Mail, Phone, Calendar, User, ShieldCheck, Star, ExternalLink, AlertC
 const UserDetailModal = ({ user, onClose }) => {
   const [activeTab, setActiveTab] = useState('Overview');
   const [kycTab, setKycTab] = useState('Citizenship');
-  const BASE_URL = "http://192.168.1.66:5000/";
+  const BASE_URL = "http://192.168.1.87:5000/";
 
   const getImgUrl = (path) => {
     if (!path) return "https://ui-avatars.com/api/?name=" + user.fullName;

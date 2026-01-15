@@ -14,7 +14,7 @@ const VerifyRiders = () => {
   const [rejectReason, setRejectReason] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const BASE_URL = "http://192.168.1.66:5000/";
+  const BASE_URL = "http://192.168.1.87:5000/";
 
   useEffect(() => { fetchPending(); }, []);
 

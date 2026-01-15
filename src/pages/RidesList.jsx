@@ -114,7 +114,7 @@ const RidesList = () => {
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-4">
                   <img 
-                    src={ride.rider?.profilePic?.startsWith('http') ? ride.rider.profilePic : `http://192.168.1.66:5000/${ride.rider?.profilePic}`} 
+                    src={ride.rider?.profilePic?.startsWith('http') ? ride.rider.profilePic : `http://192.168.1.87:5000/${ride.rider?.profilePic}`} 
                     className="w-12 h-12 rounded-full object-cover border-2 border-[#F9F5E9]" 
                     alt="" 
                     onError={(e) => e.target.src="https://ui-avatars.com/api/?name="+ride.rider?.fullName}
